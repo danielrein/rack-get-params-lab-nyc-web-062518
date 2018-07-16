@@ -8,8 +8,8 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-  case req.path.match(path)
-  when path == /items/
+  case req.path
+  when .match(/items/)
 
     # if req.path.match(/items/)
       @@items.each do |item|
