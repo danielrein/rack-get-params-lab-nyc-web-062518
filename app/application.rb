@@ -17,7 +17,7 @@ class Application
       end
   end
 
-    elsif req.path.match(/cart/)
+    if req.path.match(/cart/)
       if !@@cart.any?
         resp.write("Your cart is empty")
       else
