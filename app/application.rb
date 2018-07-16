@@ -9,7 +9,7 @@ class Application
     req = Rack::Request.new(env)
 
   case req.path.match(path)
-  when /items/
+  when path == /items/
 
     # if req.path.match(/items/)
       @@items.each do |item|
